@@ -1,6 +1,5 @@
 const express = require("express");
 
-const prueba = require("../components/prueba/prueba.routes");
 const getProductType = require("../components/productType/getProductType/getProductType.routes");
 const addProductType = require("../components/productType/addProductType/addProductType.routes");
 const deleteProductType = require("../components/productType/deleteProductType/deleteProductType.routes");
@@ -32,7 +31,6 @@ const getInvoice= require("../components/invoice/getInvoice/getInvoice.routes");
 const saveInvoice = require("../components/invoice/saveInvoice/saveInvoice.routes");
 
 const routes = (app)=>{
-    app.use('/', prueba);
     
     app.use('/getProductType', getProductType);
     app.use('/addProductType', addProductType);

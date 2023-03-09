@@ -106,6 +106,13 @@ Realiza el proceso de asentar la factura de la venta del cliente.
 Se encarga de modificar las existencias de los productos despues de la venta.
 Graba la factura nueva en INVOICE y borra el carrito en SHOPPINGCART
 
+<h3>INVOICE</h3>
+
+/getInvoice:
+Devuelve un arreglo de todas las facturas grabadas.
+
+/saveInvoice:
+Graba la factura en base a los datos pasados.
 
 
 
