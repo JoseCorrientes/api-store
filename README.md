@@ -1,4 +1,4 @@
-<h1>API STORE</h1>
+<h1>APP STOREBOOK</h1>
 
 
 <h3>PRODUCTTYPE</h3>
@@ -34,6 +34,29 @@ Permite agregar una Editorial.
 
 /deletePublisher:
 Permite borrar una Editoria ingresando su publisherid.
+
+
+<h3>PRODUCT</h3>
+
+/getProduct:
+Permite obtener uno o mas productos buscados.
+Debe recibirse author(numero o cero si no se busca, isbn string si se busca o vacio si no se busca
+productid numero o cero si no se busca)
+Se mira primero isbn, si no es vacio se busca por isbn
+Se mira segundo por productid, si no es cero se busca por productid
+Se mira tercero por authorid si es cero se devuelven TODOS los productos
+si es >0 se busca por author
+
+/addProduct:
+Permite agregar un producto nuevo.
+
+/deleteProduct:
+Permite borrar un producto determinado dado un productid.
+
+/modifyQuantityProduct:
+Permite modificar la cantidad de un producto dado ingresando su productid y
+una cantidad (si es positiva se suma al existente, caso contrario se resta)
+
 
 
 
