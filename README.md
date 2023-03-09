@@ -1,6 +1,6 @@
-<h1>API STORE<h1>
+<h1>API STORE</h1>
 
-PRODUCTTYPE
+<h3>PRODUCTTYPE</h3>
 
 /getProductType:
 Devuelve un arreglo de los tipos de productos que comercializamos.
