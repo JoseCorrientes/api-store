@@ -115,6 +115,8 @@ Devuelve un arreglo de todas las facturas grabadas.
 Graba la factura en base a los datos pasados.
 
 
+El API REST corre sobre nodejs, utiliza express y se enlaza a una base de postgresql utilizando queries SQL
+
 
 
 
