@@ -58,6 +58,27 @@ Permite modificar la cantidad de un producto dado ingresando su productid y
 una cantidad (si es positiva se suma al existente, caso contrario se resta)
 
 
+<h3>BUYPRODUCT</h3>
+
+/getBuyProduct:
+Permite ver las compras de productos hechas a las distribuidoras.
+Debe recibirse product(numero o cero si no se busca, isbn string si se busca o vacio si no se busca
+distributor numero o cero si no se busca)
+Se mira primero isbn, si no es vacio se busca por isbn
+Se mira segundo por product, si no es cero se busca por productid
+Se mira tercero por distributor si es cero se devuelven TODOS los productos
+Si es >0 se busca por distributor.
+
+
+/addBuyProduct:
+Permite agregar una compra de un producto a un distribuidor.
+
+
+<h3>SHOPPINGCART</h3>
+
+/getShoppingCart:
+Permite recuperar el carrito de compra de un cliente determinado pasando
+el clienteid.
 
 
 

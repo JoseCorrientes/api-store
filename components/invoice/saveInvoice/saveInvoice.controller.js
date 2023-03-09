@@ -22,7 +22,7 @@ async function saveInvoiceController(
       totalValue,
       client,
     ]);
-    if (result.rows < 1) return 400;
+    if (result.rowCount < 1) return 400;
     return 200;
   } catch (e) {
     return `Error - ${e}`;

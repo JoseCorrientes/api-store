@@ -3,6 +3,7 @@ const sqlText = require("./finalSell.sql");
 const modifyQuantityProduct = require("../product/modifyQuantityProduct/modifyQuantityProduct.controller");
 const getInvoice = require("../invoice/getInvoice/getInvoice.controller");
 const saveInvoice = require("../../components/invoice/saveInvoice/saveInvoice.controller");
+const deleteShoppingCart = require("../../components/shoppingCart/deleteShoppingCart/deleteShoppingCart.controller");
 
 async function finalSellController(client, cart, individualproducts, total) {
   try {
@@ -23,12 +24,21 @@ async function finalSellController(client, cart, individualproducts, total) {
         if (result2[n].invoiceid > lastIndex) lastIndex = result2[n].invoiceid;
       }
     }
-    const result3 = saveInvoice(lastIndex, individualproducts, total, client);
-    if (result3 == 200) return 200;
-    return 200;
+    const result3 = await saveInvoice(
+      lastIndex,
+      individualproducts,
+      total,
+      client
+    );
+    if (result3 == 200) {
+      const result4 = await deleteShoppingCart(cart);
+      return 200;
+    } else return 400;
+    return 400;
   } catch (e) {
     return `Error - ${e}`;
   }
 }
 
 module.exports = finalSellController;
+

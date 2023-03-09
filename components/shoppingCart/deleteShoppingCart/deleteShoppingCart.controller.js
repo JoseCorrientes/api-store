@@ -3,7 +3,6 @@ const sqlText = require("./deleteShoppingCart.sql");
 
 async function deleteShoppingCartController (car) {
   try {
-    console.log(car);
     const result = await newPool.query(sqlText[0], [car]);
     if (result.rowCount > 0) return 200;
     else return 400;
