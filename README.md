@@ -80,6 +80,15 @@ Permite agregar una compra de un producto a un distribuidor.
 Permite recuperar el carrito de compra de un cliente determinado pasando
 el clienteid.
 
+/deleteShoppingCart:
+Permite borrar el carrito de compra dado el cartid.
+
+/addEmptyShoppingCart:
+Genera una Carrito vacio para un clientid particular.
+
+/addProductShoppingCart: 
+Modifica el contenido de los productos para un carrito dado.
+
 
 
 
