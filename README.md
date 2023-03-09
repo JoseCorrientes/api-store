@@ -90,6 +90,28 @@ Genera una Carrito vacio para un clientid particular.
 Modifica el contenido de los productos para un carrito dado.
 
 
+<h3>BUYCLIENTPRODUCT</h3>
+
+/buyClientBlockProduct:
+Dado un arreglo de productos, cantidades y precios del cliente me devuelve
+un arreglo de lo que verdaderamente se puede facturar en base a las cantidades que hay con
+el precio actualizado de la base de datos.
+Tambien me devuelve el precio total calculado para ese arreglo resultante y el cartid.
+
+
+<h3>FINALSELL</h3>
+
+/finalSell:
+Realiza el proceso de asentar la factura de la venta del cliente.
+Se encarga de modificar las existencias de los productos despues de la venta.
+Graba la factura nueva en INVOICE y borra el carrito en SHOPPINGCART
+
+
+
+
+
+
+
 
 
 
